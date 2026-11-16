@@ -1,0 +1,363 @@
+
+/* =====================================
+   2048 GAME - PORTFOLIO STYLING
+===================================== */
+
+.portfolio-2048 {
+    min-height: 100vh;
+    padding: 45px 20px;
+    background: #080808;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.game2048-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Back button */
+
+.game2048-top {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.game2048-back {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.game2048-back:hover {
+    color: white;
+}
+
+/* Header */
+
+.game2048-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.game2048-header h1 {
+    font-size: 65px;
+    font-weight: 900;
+    color: #e50914;
+    margin: 0;
+}
+
+.game2048-header p {
+    color: #cccccc;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.game2048-new {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.game2048-new:hover {
+    background: #b80710;
+    transform: translateY(-2px);
+}
+
+/* Score boxes */
+
+.game2048-scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.game2048-score {
+    background: #222222;
+    border-radius: 6px;
+    padding: 12px 22px;
+    min-width: 110px;
+    text-align: center;
+}
+
+.game2048-score span {
+    display: block;
+    color: #aaaaaa;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.game2048-score strong {
+    color: white;
+    font-size: 25px;
+}
+
+/* Game board */
+
+.game2048-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    background: #282828;
+    border: 2px solid #e50914;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Empty board cells */
+
+.game2048-cell {
+    background: #444444;
+    border-radius: 6px;
+}
+
+/* Number tiles */
+
+.game2048-tile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(25% - 7.5px);
+    height: calc(25% - 7.5px);
+
+    border-radius: 6px;
+    font-size: clamp(22px, 6vw, 38px);
+    font-weight: 900;
+    color: #333333;
+
+    transition:
+        left 0.12s ease-in-out,
+        top 0.12s ease-in-out,
+        transform 0.12s ease-in-out;
+
+    z-index: 2;
+}
+
+/* Tile colours */
+
+.tile-2 {
+    background: #eee4da;
+}
+
+.tile-4 {
+    background: #ede0c8;
+}
+
+.tile-8 {
+    background: #f2b179;
+    color: white;
+}
+
+.tile-16 {
+    background: #f59563;
+    color: white;
+}
+
+.tile-32 {
+    background: #f67c5f;
+    color: white;
+}
+
+.tile-64 {
+    background: #f65e3b;
+    color: white;
+}
+
+.tile-128 {
+    background: #edcf72;
+    color: white;
+    font-size: clamp(19px, 5vw, 32px);
+}
+
+.tile-256 {
+    background: #edcc61;
+    color: white;
+    font-size: clamp(19px, 5vw, 32px);
+}
+
+.tile-512 {
+    background: #edc850;
+    color: white;
+    font-size: clamp(19px, 5vw, 32px);
+}
+
+.tile-1024 {
+    background: #e9bd35;
+    color: white;
+    font-size: clamp(16px, 4vw, 27px);
+}
+
+.tile-2048 {
+    background: #e50914;
+    color: white;
+    font-size: clamp(16px, 4vw, 27px);
+}
+
+/* Tile animations */
+
+.tile-new {
+    animation: tileAppear 0.18s ease;
+}
+
+.tile-merged {
+    animation: tileMerge 0.18s ease;
+}
+
+@keyframes tileAppear {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes tileMerge {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Instructions */
+
+.game2048-instructions {
+    margin-top: 25px;
+    padding: 18px;
+    background: #181818;
+    border-left: 4px solid #e50914;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.game2048-instructions strong {
+    color: #e50914;
+    font-size: 17px;
+}
+
+.game2048-instructions p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+.game2048-instructions b {
+    color: white;
+}
+
+/* Win and Game Over popup */
+
+.game2048-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: 9999;
+    padding: 20px;
+}
+
+.game2048-popup {
+    width: 100%;
+    max-width: 380px;
+    padding: 35px 25px;
+    background: #181818;
+    border: 2px solid #e50914;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.25);
+}
+
+.game2048-popup h2 {
+    color: #e50914;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.game2048-popup p {
+    color: #cccccc;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.game2048-popup button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.game2048-popup button:hover {
+    background: #b80710;
+}
+
+/* Responsive design */
+
+@media (max-width: 500px) {
+    .portfolio-2048 {
+        padding: 30px 15px;
+    }
+
+    .game2048-header h1 {
+        font-size: 52px;
+    }
+
+    .game2048-new {
+        width: 100%;
+    }
+
+    .game2048-board {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .game2048-tile {
+        width: calc(25% - 7.5px);
+        height: calc(25% - 7.5px);
+    }
+}

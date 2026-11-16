@@ -1,0 +1,155 @@
+.about-page {
+    min-height: calc(100vh - 70px);
+    background-color: #080808;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.about-label {
+    color: #e50914;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.about-content > h1 {
+    font-size: 56px;
+    margin: 0 0 50px;
+}
+
+.about-content > h1 span {
+    color: #e50914;
+}
+
+.about-card {
+    background-color: #111111;
+
+    border: 1px solid #292929;
+    border-top: 3px solid #e50914;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+    text-align: left;
+}
+
+.about-image {
+    width: 320px;
+    min-width: 320px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 360px;
+
+    object-fit: cover;
+    display: block;
+
+    border: 1px solid #333333;
+}
+
+.about-info {
+    flex: 1;
+}
+
+.about-intro {
+    color: #e50914;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.about-info h2 {
+    font-size: 32px;
+    margin: 0 0 25px;
+}
+
+.about-info h2 span {
+    color: #e50914;
+}
+
+.about-info p {
+    color: #aaaaaa;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Back button */
+
+.back-home {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 14px 28px;
+
+    color: white;
+    background-color: #111111;
+
+    border: 1px solid #333333;
+    border-left: 3px solid #e50914;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.2s ease;
+}
+
+.back-home:hover {
+    background-color: #e50914;
+    border-color: #e50914;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .about-page {
+        padding: 40px 20px;
+    }
+
+    .about-card {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .about-image {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-image img {
+        height: 400px;
+    }
+
+    .about-content > h1 {
+        font-size: 42px;
+    }
+
+    .about-info {
+        text-align: center;
+    }
+}

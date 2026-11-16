@@ -1,0 +1,319 @@
+
+/* ==============================
+   PROJECT PAGE
+============================== */
+
+.project-page {
+    min-height: calc(100vh - 70px);
+    background: #080808;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 25px;
+}
+
+.project-content {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.project-label {
+    color: #e50914;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.project-content h1 {
+    font-size: clamp(40px, 6vw, 58px);
+    font-weight: 800;
+    margin: 0 0 45px;
+}
+
+.project-content h1 span {
+    color: #e50914;
+}
+
+/* ==============================
+   ADMIN BUTTONS
+============================== */
+
+.project-content button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.project-content > .red-button {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.project-content > .red-button:hover {
+    background: #ff1c29;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.3);
+}
+
+/* ==============================
+   ADMIN PROJECT FORM
+============================== */
+
+.project-form {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    padding: 35px;
+    background: #111;
+    border: 1px solid #292929;
+    border-top: 4px solid #e50914;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+.project-form h2 {
+    color: white;
+    font-size: 27px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.project-form label {
+    display: block;
+    color: #ddd;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+.project-form input,
+.project-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: #080808;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 13px 15px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.project-form input:focus,
+.project-form textarea:focus {
+    border-color: #e50914;
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.12);
+}
+
+.project-form input[type="date"] {
+    color-scheme: dark;
+}
+
+.project-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.project-form button {
+    border: none;
+    border-radius: 6px;
+    padding: 13px 22px;
+    margin: 25px 10px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.project-form .red-button {
+    background: #e50914;
+    color: white;
+}
+
+.project-form .red-button:hover {
+    background: #ff1c29;
+}
+
+.project-form .dark-button {
+    background: #292929;
+    color: white;
+}
+
+.project-form .dark-button:hover {
+    background: #444;
+}
+
+/* ==============================
+   PROJECT GRID
+============================== */
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 25px 0 45px;
+    text-align: left;
+}
+
+/* ==============================
+   PROJECT CARDS
+============================== */
+
+.project-card {
+    display: block;
+    background: #111;
+    border: 1px solid #292929;
+    border-top: 3px solid #e50914;
+    border-radius: 8px;
+    padding: 24px;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #e50914;
+    box-shadow: 0 12px 35px rgba(229, 9, 20, 0.15);
+}
+
+.project-card h2 {
+    font-size: 23px;
+    margin: 0 0 15px;
+}
+
+.project-card p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   2048 GAME CARD
+============================== */
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.project-card-info h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.project-card-info p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.play-game {
+    display: inline-block;
+    color: #e50914;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .play-game {
+    color: white;
+}
+
+/* ==============================
+   EDIT AND DELETE BUTTONS
+============================== */
+
+.project-admin-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.project-admin-buttons button {
+    flex: 1;
+    padding: 11px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border: 1px solid #444;
+    background: #222;
+}
+
+.project-admin-buttons button:first-child {
+    background: #e50914;
+    border-color: #e50914;
+}
+
+.project-admin-buttons button:first-child:hover {
+    background: #ff1c29;
+}
+
+.project-admin-buttons button:last-child:hover {
+    background: #444;
+}
+
+/* ==============================
+   BACK HOME
+============================== */
+
+.back-home {
+    display: inline-block;
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: color 0.2s;
+}
+
+.back-home:hover {
+    color: white;
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 600px) {
+    .project-page {
+        padding: 55px 18px;
+    }
+
+    .project-content h1 {
+        font-size: 40px;
+    }
+
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-form {
+        padding: 23px 18px;
+    }
+
+    .project-image {
+        height: 190px;
+    }
+
+    .project-admin-buttons {
+        flex-direction: column;
+    }
+}

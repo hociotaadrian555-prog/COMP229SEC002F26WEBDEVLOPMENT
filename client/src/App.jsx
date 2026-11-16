@@ -1,0 +1,47 @@
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
+import About from "./Components/About";
+
+import Project from "./Components/Pages/Project";
+import Education from "./Components/Pages/Education";
+import Contact from "./Components/Pages/Contact";
+import Login from "./Components/Pages/Login";
+import Register from "./Components/Pages/Register";
+import Game2048 from "./Components/Pages/Game2048";
+
+function App() {
+    return (
+        <BrowserRouter>
+
+            <Navbar />
+
+            {/* Website Pages */}
+            <Routes>
+
+                <Route path="/" element={<Home />} />
+
+                <Route path="/about" element={<About />} />
+
+                <Route path="/project" element={<Project />} />
+
+                <Route path="/education" element={<Education />} />
+
+                <Route path="/contact" element={<Contact />} />
+
+                <Route path="/login" element={<Login />} />
+
+                <Route path="/register" element={<Register />} />
+
+                {/* 2048 Game */}
+                <Route path="/game2048" element={<Game2048 />} />
+
+            </Routes>
+
+        </BrowserRouter>
+    );
+}
+
+export default App;
