@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
@@ -14,7 +14,7 @@ import Game2048 from "./Components/Pages/Game2048";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
 
             <Navbar />
 
@@ -40,7 +40,7 @@ function App() {
 
             </Routes>
 
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
