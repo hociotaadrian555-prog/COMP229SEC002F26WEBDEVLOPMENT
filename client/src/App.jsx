@@ -15,31 +15,26 @@ import Game2048 from "./Components/Pages/Game2048";
 function App() {
     return (
         <HashRouter>
-
             <Navbar />
 
-            {/* Website Pages */}
             <Routes>
+                {/* Login is now the default landing page */}
+                <Route path="/" element={<Login />} />
 
-                <Route path="/" element={<Home />} />
-
+                {/* Website Pages */}
+                <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
-
                 <Route path="/project" element={<Project />} />
-
                 <Route path="/education" element={<Education />} />
-
                 <Route path="/contact" element={<Contact />} />
 
+                {/* Authentication */}
                 <Route path="/login" element={<Login />} />
-
                 <Route path="/register" element={<Register />} />
 
                 {/* 2048 Game */}
                 <Route path="/game2048" element={<Game2048 />} />
-
             </Routes>
-
         </HashRouter>
     );
 }
