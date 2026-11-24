@@ -1,5 +1,3 @@
-
-const API_URL =
-    import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL = "https://myportfolio-backend-lr0q.onrender.com";
 
 export default API_URL;
