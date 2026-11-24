@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import "./About.css";
 
@@ -53,7 +54,7 @@ function About() {
 
                 </div>
 
-                <Link to="/" className="back-home">
+                <Link to="/home" className="back-home">
                     ← Back to Home
                 </Link>
 

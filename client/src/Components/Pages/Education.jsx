@@ -368,7 +368,7 @@ function Education() {
                     </div>
                 </div>
 
-                <Link to="/" className="back-home">
+                <Link to="/home" className="back-home">
                     ← Back to Home
                 </Link>
 

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -38,7 +39,8 @@ function Login() {
 
             alert("Login successful!");
 
-            navigate("/");
+            // Redirect to the homepage after login
+            navigate("/home");
 
         } catch (error) {
             alert(error.message);
@@ -79,7 +81,7 @@ function Login() {
                 </p>
 
                 <Link to="/" className="back-home">
-                    ← Back to Home
+                    ← Back to Login
                 </Link>
 
             </div>
