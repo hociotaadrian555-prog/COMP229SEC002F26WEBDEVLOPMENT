@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import API_URL from "../../api";
 import "./Education.css";
 
 function Education() {
@@ -32,7 +33,7 @@ function Education() {
             setError("");
 
             const response = await fetch(
-                "http://localhost:3000/api/qualifications",
+                `${API_URL}/api/qualifications`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -89,8 +90,8 @@ function Education() {
 
         try {
             const url = editingId
-                ? `http://localhost:3000/api/qualifications/${editingId}`
-                : "http://localhost:3000/api/qualifications";
+                ? `${API_URL}/api/qualifications/${editingId}`
+                : `${API_URL}/api/qualifications`;
 
             const response = await fetch(url, {
                 method: editingId ? "PUT" : "POST",
@@ -145,7 +146,7 @@ function Education() {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/api/qualifications/${id}`,
+                `${API_URL}/api/qualifications/${id}`,
                 {
                     method: "DELETE",
                     headers: {

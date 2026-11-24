@@ -1,7 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Contact.css";
+import API_URL from "../../api";
 
 function Contact() {
     const navigateToHome = useNavigate();
@@ -41,7 +41,7 @@ function Contact() {
             setError("");
 
             const response = await fetch(
-                "http://localhost:3000/api/contacts",
+                `${API_URL}/api/contacts`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -83,7 +83,7 @@ function Contact() {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/api/contacts",
+                `${API_URL}/api/contacts`,
                 {
                     method: "POST",
                     headers: {
@@ -147,7 +147,7 @@ function Contact() {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/api/contacts/${editingId}`,
+                `${API_URL}/api/contacts/${editingId}`,
                 {
                     method: "PUT",
                     headers: {
@@ -180,7 +180,7 @@ function Contact() {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/api/contacts/${id}`,
+                `${API_URL}/api/contacts/${id}`,
                 {
                     method: "DELETE",
                     headers: {

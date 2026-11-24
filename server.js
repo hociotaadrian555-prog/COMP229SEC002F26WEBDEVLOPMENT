@@ -1,4 +1,3 @@
-
 import app from "./server/express.js";
 import router from "./server/assets-router.js";
 import connectDB from "./server/config/db.js";
@@ -10,11 +9,19 @@ app.use("/", function (req, res) {
 });
 
 const startServer = async () => {
-    await connectDB();
+    try {
+        await connectDB();
 
-    app.listen(3000, () => {
-        console.log("Server running at http://localhost:3000/");
-    });
+        const PORT = process.env.PORT || 3000;
+
+        app.listen(PORT, () => {
+            console.log(`Server running on port ${PORT}`);
+        });
+
+    } catch (error) {
+        console.error("Failed to start server:", error);
+        process.exit(1);
+    }
 };
 
 startServer();

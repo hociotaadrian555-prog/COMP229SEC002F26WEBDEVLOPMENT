@@ -1,6 +1,6 @@
-
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
+import API_URL from "../api";
 
 function Home() {
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ function Home() {
     // Handle user logout
     const handleLogout = async () => {
         try {
-            await fetch("http://localhost:3000/auth/signout", {
+            await fetch(`${API_URL}/auth/signout`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`
